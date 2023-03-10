@@ -8,6 +8,7 @@ import { UsersService } from './users.service';
 })
 export class UsersComponent implements OnInit {
   users: any = [];
+  headerVisible: boolean = false;
 
   constructor ( private usersService: UsersService ) {}
 

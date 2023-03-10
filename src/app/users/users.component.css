@@ -1,12 +1,13 @@
 table {
+    top: 50px;
     margin: 20px auto;
     width: 200px;
-    text-align: center;
 }
 
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+    text-align: center;
 }
 
 th, td {
