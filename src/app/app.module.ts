@@ -6,24 +6,14 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './pages/home/home.component';
-import { MenuComponent } from './pages/menu/menu.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { ReservationComponent } from './pages/reservation/reservation.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     LoginComponent,
-    HomeComponent,
-    MenuComponent,
-    ContactComponent,
-    ReservationComponent,
-    HeaderComponent,
-    FooterComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

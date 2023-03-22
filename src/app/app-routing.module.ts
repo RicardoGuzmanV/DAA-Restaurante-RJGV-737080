@@ -4,16 +4,10 @@ import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthService } from './auth/auth.service';
-import { HomeComponent } from './pages/home/home.component';
-import { MenuComponent } from './pages/menu/menu.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { ReservationComponent } from './pages/reservation/reservation.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'menu', component: MenuComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'reservation', component: ReservationComponent },
+  { path: '', component: HomeComponent },
   { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent }
 ];
