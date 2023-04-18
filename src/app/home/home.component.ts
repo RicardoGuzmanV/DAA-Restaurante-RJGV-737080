@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  const menu = document.querySelector<HTMLDivElement>("#menu-icon");
+  const navbar = document.querySelector<HTMLElement>(".navbar");
 
+  menu.addEventListener("click", function(){
+    navbar.classList.toggle("active");
+  });
+
+  window.onscroll = () => {
+    navbar.classList.remove("active");
+  };
 }
