@@ -1,67 +1,117 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Nombre del Restaurante</title>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
+    <title>RESTAURANTE XYZ</title>
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
     <header>
-      <h1>Nombre del Restaurante</h1>
-      <nav>
-        <ul>
-          <li><a href="#informacion">Información</a></li>
-          <li><a href="#menu">Menú</a></li>
-          <li><a href="#ubicacion">Ubicación</a></li>
-          <li><a href="#reservacion">Reservación</a></li>
+        <a href="#" class="logo">RESTAURANTE XYZ</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        
+        <ul class="navbar">
+            <li><a href="#home">CASITA</a></li>
+            <li><a href="#menu">MENÚ</a></li>
+            <li><a href="#reservation">RESERVACIÓN</a></li>
+            <li><a href="#contact">CONTACTANOS</a></li>
         </ul>
-      </nav>
     </header>
 
-    <main>
-      <section id="informacion">
-        <h2>Información del Restaurante</h2>
-        <p>Aquí puedes incluir información sobre el restaurante, como su historia, filosofía y servicios.</p>
-      </section>
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>FULL WEBSITE</h1>
+            <h2>FOOD THE <br> MOST PRECIOUS THINGS</h2>
+            <a href="#menu" class="btn">MENU</a>
+        </div>
 
-      <section id="menu">
-        <h2>Menú del Restaurante</h2>
-        <p>Aquí puedes incluir diferentes secciones para el menú del restaurante, como entradas, platos principales, postres, bebidas, etc.</p>
-      </section>
+        <div class="home-img">
+            <img src="../../assets/img/home.png" alt="imagen_principal" width="600px" height="600px">
+        </div>
 
-      <section id="ubicacion">
-        <h2>Ubicación del Restaurante</h2>
-        <p>Aquí puedes incluir un mapa con la ubicación del restaurante y su dirección.</p>
-      </section>
+        <div class="about-img">
+            <img src="../../assets/img/about.png" alt="acerca_de_imagen">
+        </div>
 
-      <section id="reservacion">
-        <h2>Reservación</h2>
-        <form>
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
+        <div class="about-text">
+            <span>ABOUT US</span>
+            <h2>WE SPEAK THE GOOD <br> FOOD LANGUAGE</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
+                with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <a href="#contact" class="btn">CONTACTANOS</a>
+        </div>
+    </section>
 
-          <label for="fecha">Fecha:</label>
-          <input type="date" id="fecha" name="fecha" required>
+    <section class="menu" id="menu">
+        <div class="heading">
+            <span>FOOD MENU</span>
+            <h2>Fresh taste and great price</h2>
+        </div>
 
-          <label for="hora">Hora:</label>
-          <input type="time" id="hora" name="hora" required>
+        <div class="menu-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="../../assets/img/food1.png" alt="hamburguesa de pollo">
+                </div>
+                <h2>Burguir de Pollo</h2>
+                <h3>Tasty Food</h3>
+                <span>$11.00</span>
+            </div>
 
-          <label for="personas">Número de personas:</label>
-          <input type="number" id="personas" name="personas" min="1" max="10" required>
+            <div class="box">
+                <div class="box-img">
+                    <img src="../../assets/img/food2.png" alt="hamburguesa de pollo">
+                </div>
+                <h2>Burguir de Carne</h2>
+                <h3>Tasty Food</h3>
+                <span>$11.00</span>
+            </div>
 
-          <label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" required>
+            <div class="box">
+                <div class="box-img">
+                    <img src="../../assets/img/food3.png" alt="hamburguesa de pollo">
+                </div>
+                <h2>Poshoshon</h2>
+                <h3>Tasty Food</h3>
+                <span>$11.00</span>
+            </div>
+        </div>
+    </section>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+    <section class="contact">
+        <div class="footer">
+            <div class="main">
+                <div class="col">
+                    <h4>LINKS DEL MENÚ</h4>
+                    <ul>
+                        <li><a href="#home">CASITA</a></li>
+                        <li><a href="#menu">MENÚ</a></li>
+                        <li><a href="#reservation">RESERVACIÓN</a></li>
+                        <li><a href="#contact">CONTACTANOS</a></li>
+                    </ul>
+                </div>
 
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <p>Derechos reservados © 2023 Nombre del Restaurante</p>
-    </footer>
-  </body>
+                <div class="col">
+                    <h4>CONTACTANOS</h4>
+                    <div class="social">
+                        <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                        <a href=""><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href=""><i class='bx bxl-twitter' ></i></a>
+                        <a href=""><i class='bx bxl-youtube' ></i></a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+</body>
 </html>

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'DAA-Restaurante-RJGV-737080'`, () => {
+  it(`should have as title 'RESTAURANTE XYZ'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('DAA-Restaurante-RJGV-737080');
+    expect(app.title).toEqual('RESTAURANTE XYZ');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('DAA-Restaurante-RJGV-737080 app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('RESTAURANTE XYZ app is running!');
   });
 });
