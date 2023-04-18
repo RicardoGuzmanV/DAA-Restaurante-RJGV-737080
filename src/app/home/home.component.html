@@ -26,8 +26,8 @@
 
     <section class="home" id="home">
         <div class="home-text">
-            <h1>FULL WEBSITE</h1>
-            <h2>FOOD THE <br> MOST PRECIOUS THINGS</h2>
+            <h1>EXCELENTE!</h1>
+            <h2>¿MUCHA HAMBRE? <br> Come con nosotros y sacia tu hambre rapido.</h2>
             <a href="#menu" class="btn">MENU</a>
         </div>
 
@@ -40,7 +40,7 @@
         </div>
 
         <div class="about-text">
-            <span>ABOUT US</span>
+            <span>ACERCA DE NOSOTROS</span>
             <h2>WE SPEAK THE GOOD <br> FOOD LANGUAGE</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -54,8 +54,8 @@
 
     <section class="menu" id="menu">
         <div class="heading">
-            <span>FOOD MENU</span>
-            <h2>Fresh taste and great price</h2>
+            <span>MENÚ</span>
+            <h2>Sabor fresco y buen precio</h2>
         </div>
 
         <div class="menu-container">
@@ -64,8 +64,8 @@
                     <img src="../../assets/img/food1.png" alt="hamburguesa de pollo">
                 </div>
                 <h2>Burguir de Pollo</h2>
-                <h3>Tasty Food</h3>
-                <span>$11.00</span>
+                <h3>Sándwich con pechuga de pollo empanizada estilo sureño, lechuga, tomate, mayonesa y pan horneado. Incluye papas y refresco.</h3>
+                <span>$141.00</span>
             </div>
 
             <div class="box">
@@ -73,8 +73,8 @@
                     <img src="../../assets/img/food2.png" alt="hamburguesa de pollo">
                 </div>
                 <h2>Burguir de Carne</h2>
-                <h3>Tasty Food</h3>
-                <span>$11.00</span>
+                <h3>Hamburguesa con carne 100% de res asada a la parrilla, queso estilo americano, lechuga y aderezo classic.  Incluye papas y refresco.</h3>
+                <span>$70.00</span>
             </div>
 
             <div class="box">
@@ -82,13 +82,40 @@
                     <img src="../../assets/img/food3.png" alt="hamburguesa de pollo">
                 </div>
                 <h2>Poshoshon</h2>
-                <h3>Tasty Food</h3>
-                <span>$11.00</span>
+                <h3>8 piezas de pollo (crujientes) + 2 complementos </h3>
+                <span>$180.00</span>
             </div>
         </div>
     </section>
 
-    <section class="contact">
+    <section class="reservation" id="reservation">
+        <form class="reservation-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+          
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+          
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+          
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" name="date" required>
+          
+            <label for="time">Hora:</label>
+            <input type="time" id="time" name="time" required>
+          
+            <label for="guests">Número de invitados:</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" required>
+          
+            <label for="comments">Comentarios adicionales:</label>
+            <textarea id="comments" name="comments"></textarea>
+          
+            <input type="submit" value="Reservar">
+          </form>                 
+    </section>
+
+    <section class="contact" id="contact">
         <div class="footer">
             <div class="main">
                 <div class="col">
