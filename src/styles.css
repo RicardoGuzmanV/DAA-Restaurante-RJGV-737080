@@ -1,10 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-
 :root {
     --main-color: #ff702a;
     --text-color: #fff;
     --bg-color: #1e1c2a;
-    --big-font: 5rem;
-    --h2-font:2.25rem;
-    --p-font:0.9rem;
+    --big-font: 2.5rem;
+    --h2-font: 2rem;
+    --p-font: 0.9rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
 }
