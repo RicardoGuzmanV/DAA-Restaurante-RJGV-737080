@@ -8,8 +8,8 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },
-  { path: 'login', component: LoginComponent }
+  { path: 'admin/users', component: UsersComponent, canActivate: [AuthGuard] },
+  { path: 'admin/login', component: LoginComponent }
 ];
 
 @NgModule({

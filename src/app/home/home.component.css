@@ -231,7 +231,7 @@ section {
     box-sizing: border-box;
   }
   
-  .reservation-form input[type="submit"] {
+  .reservation-form button[type="submit"] {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -311,47 +311,4 @@ section {
     transform: scale(1.2);
     color: var(--bg-color);
     background: var(--text-color);
-}
-
-@media (max-width: 1560px){
-    header{
-        padding: 15px 40px;
-    }
-    :root{
-        --bg-font: 3.5rem;
-        --h2-font: 2rem;
-    }
-}
-
-@media (max-width: 1140px){
-    section{
-        padding: 50px 8%;
-    }
-    #menu-icon{
-        display: initial;
-        color: var(--text-color);
-    }
-    header .navbar{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background: #2b2640;
-        transition: .3s;
-    }
-    header .navbar.active{
-        top: 70px;
-    }
-    .navbar a{
-        padding: 1.5rem;
-        display: block;
-    }
-
-    .col{
-        width: 50%;
-        margin-bottom: 10px;
-    }
 }
