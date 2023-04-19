@@ -21,6 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ResListComponent } from './res-list/res-list.component';
+import { ReservationService } from './_services/res/reservation.service';
+import { UserService } from './_services/user/user.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,7 @@ import { ResListComponent } from './res-list/res-list.component';
     MatIconModule,
     MatTableModule,
   ],
-  providers: [],
+  providers: [ReservationService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

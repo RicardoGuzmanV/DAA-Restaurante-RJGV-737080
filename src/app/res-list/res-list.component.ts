@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Reservation } from '../_models/reservation.model';
+import { ReservationService } from '../_services/res/reservation.service';
 
 @Component({
   selector: 'app-res-list',
   templateUrl: './res-list.component.html',
   styleUrls: ['./res-list.component.css']
 })
-export class ResListComponent {
-  data = [
-    { name: 'Ricardo' , email: 'ricardo@emial.com' , phone: '8119802471' , people: '2' , reservationDate: '2023-04-21' , reservationSchedule: '17:40' }
-  ];
+export class ResListComponent implements OnInit{
+  reservations: Reservation[] = [ ];
 
   displayedColumns: string[] = [
     'name',
@@ -20,11 +20,17 @@ export class ResListComponent {
     'actions',
   ]
 
+  constructor(private reservationService: ReservationService) {}
+
+  ngOnInit(): void {
+      this.reservations = this.reservationService.getReservations();
+  }
+
   editButtonClicked(){
     alert('Boton de edicion activado');
   }
 
   deleteButtonClicked(){
-    alert('Boton de borrado activado');
+    this.reservationService.deleteReservation();
   }
 }
