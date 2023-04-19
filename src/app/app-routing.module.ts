@@ -5,11 +5,16 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthService } from './auth/auth.service';
 import { HomeComponent } from './home/home.component';
+import { ResListComponent } from './res-list/res-list.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'admin/users', component: UsersComponent, canActivate: [AuthGuard] },
-  { path: 'admin/login', component: LoginComponent }
+  { path: 'admin', redirectTo: 'admin/login' },
+  { path: 'admin',  children: [
+    { path: 'login', component: LoginComponent },
+    { path: 'users', component: UsersComponent },
+    { path: 'reslist', component: ResListComponent },
+  ] },
 ];
 
 @NgModule({

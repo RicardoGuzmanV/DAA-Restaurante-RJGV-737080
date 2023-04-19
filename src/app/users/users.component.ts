@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { UsersService } from './users.service';
 
 @Component({
@@ -6,13 +6,21 @@ import { UsersService } from './users.service';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
-export class UsersComponent implements OnInit {
-  users: any = [];
-  headerVisible: boolean = false;
+export class UsersComponent {
+  users = [
+    { username: 'Ricardo Guzman' },
+  ];
 
-  constructor ( private usersService: UsersService ) {}
+  displayedColumns: string[] = [
+    'username',
+    'actions',
+  ]
 
-  ngOnInit() {
-    this.users = this.usersService.getUsers().subscribe((res: any) => (this.users = res));
+  addButtonClicked(){
+    alert('Boton de addicion activado');
+  }
+
+  deleteButtonClicked(){
+    alert('Boton de borrado activado');
   }
 }
