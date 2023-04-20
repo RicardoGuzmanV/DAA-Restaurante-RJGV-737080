@@ -1,18 +1,28 @@
-import { Component } from '@angular/core';
-import { AuthService } from '../auth/auth.service';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  //email: string;
-  //password: string;
+export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService) {}
+  form: FormGroup = new FormGroup({})
 
-  /*onSubmit() {
-    this.authService.login(this.email, this.password);
-  }*/
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.form = this.fb.group({
+      user: [null, [Validators.required, Validators.minLength(8), Validators.maxLength(10)]],
+      password: [null, [Validators.required]],
+    });
+  }
+
+  onSubmit(form: any) {
+    alert(
+      'Gracias por reservar con nosotros\n' +
+      JSON.stringify(form.value, null, 4)
+    );
+  }
 }

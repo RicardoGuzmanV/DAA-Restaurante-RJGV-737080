@@ -89,29 +89,35 @@
     </section>
 
     <section class="reservation" id="reservation">
-        <form class="reservation-form">
+        <form class="reservation-form" [formGroup]="form" (ngSubmit)="formSubmit(form)">
             <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" placeholder="NOMBRE" formControlName="name">
+            <p *ngIf="form.controls['name'].errors?.['required']">ESTE CAMPO ES REQUERIDO.</p>
           
             <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" placeholder="EMAIL" formControlName="email">
+            <p *ngIf="form.controls['email'].errors?.['required']">ESTE CAMPO ES REQUERIDO.</p>
           
             <label for="phone">Teléfono:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" placeholder="1234567890" formControlName="phone">
+            <p *ngIf="form.controls['phone'].errors?.['required']">ESTE CAMPO ES REQUERIDO.</p>
           
             <label for="date">Fecha:</label>
-            <input type="date" id="date" name="date" required>
+            <input type="date" id="date" formControlName="reservationDate">
+            <p *ngIf="form.controls['reservationDate'].errors?.['required']">ESTE CAMPO ES REQUERIDO.</p>
           
             <label for="time">Hora:</label>
-            <input type="time" id="time" name="time" required>
+            <input type="time" id="time" formControlName="reservationSchedule">
+            <p *ngIf="form.controls['reservationSchedule'].errors?.['required']">ESTE CAMPO ES REQUERIDO.</p>
           
             <label for="guests">Número de invitados:</label>
-            <input type="number" id="guests" name="guests" min="1" max="20" required>
+            <input type="number" id="guests" placeholder="INGRESE LA CANTIDAD DE PERSONAS QUE ASISTIRAN" formControlName="people">
+            <p *ngIf="form.controls['people'].errors?.['required']">ESTE CAMPO ES REQUERIDO.</p>
           
             <label for="comments">Comentarios adicionales:</label>
-            <textarea id="comments" name="comments"></textarea>
+            <textarea id="comments" formControlName="comments" placeholder="INGRESA AQUI TUS SOLICITUDES O COMENTARIOS."></textarea>
           
-            <input type="submit" value="Reservar">
+            <button type="submit" [disabled]="!form.valid">RESERVAR</button>
           </form>                 
     </section>
 
